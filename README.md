@@ -2,7 +2,9 @@
 
 This repo will help you get Ultraviolet running under GitHub Actions, with the power of localtunnel.me and Node.js and hardware better than repl.it
 
-WARNING: This will only last for 2 hours (or maybe more if your lucky), don't complain please 
+WARNING: This will only last for 6 hours, don't complain please
+
+**THE LINK WILL SELF DISTRUCT IF INACTIVE FOR A HOUR**
 
 # Setup
 
