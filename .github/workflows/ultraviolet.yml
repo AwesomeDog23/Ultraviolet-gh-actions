@@ -16,11 +16,9 @@ jobs:
           screen -dm npm start
       - name: tunnel and expose to web
         run: |
-          npm install -g localtunnel > /dev/null 2>&1
-          tmux new -d -s uv
-          sleep 1
-          tmux send-keys -t uv "lt -p 8080" ENTER
-          sleep 1
-          tmux capture-pane -pt uv -S 1 -E 1
+          wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+          sudo tar xvzf ~/Downloads/ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+          screen -dm ngrok http 8080
+          curl localhost:4040/api/tunnels
       - name: sleep
         run: sleep 999999999
